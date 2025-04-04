@@ -4,7 +4,7 @@ export const getServerUrl = () => {
     const host = window.location.hostname;
     return host.includes('localhost')
         ? 'http://localhost:3000'
-        : 'https://edu-community-api.tetricode.com';
+        : 'http://localhost:3000';
 };
 
 export const setCookie = (cookie_name, value, days) => {
