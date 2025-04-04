@@ -1,12 +1,8 @@
-import 'dotenv/config';
-
-const EC2_IP = process.env.EC2_IP;
-
 export const getServerUrl = () => {
     const host = window.location.hostname;
     return host.includes('localhost')
         ? 'http://localhost:3000'
-        : `http://${EC2_IP}:3000`;
+        : `http://${host}:3000`;
 };
 
 export const setCookie = (cookie_name, value, days) => {
