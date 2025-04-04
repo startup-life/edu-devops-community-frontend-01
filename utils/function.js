@@ -1,10 +1,12 @@
-import Dialog from '../component/dialog/dialog.js';
+require('dotenv').config({ path: './.env' });
+
+const EC2_IP = process.env.EC2_IP;
 
 export const getServerUrl = () => {
     const host = window.location.hostname;
     return host.includes('localhost')
         ? 'http://localhost:3000'
-        : 'http://localhost:3000';
+        : `http://${EC2_IP}:3000`;
 };
 
 export const setCookie = (cookie_name, value, days) => {
