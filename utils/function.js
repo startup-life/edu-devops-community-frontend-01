@@ -1,4 +1,4 @@
-require('dotenv').config({ path: './.env' });
+import 'dotenv/config';
 
 const EC2_IP = process.env.EC2_IP;
 
